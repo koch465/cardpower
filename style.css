@@ -25,12 +25,11 @@ h1 {
     height: 45px;
     width: 100%; /* ปรับให้กว้าง 100% */
     max-width: 300px; /* ตั้งค่าสูงสุดให้ปุ่มไม่ใหญ่เกินไป */
-    font-weight: 10px;
-    margin-top: 20px;
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 20px;
+    margin: 20px; /* เพิ่ม margin เพื่อให้มีระยะห่างจากส่วนอื่น */
+    text-align: center; /* จัดข้อความในปุ่มให้อยู่กลาง */
 }
 
 .persona.clicked {
@@ -64,10 +63,12 @@ h1 {
 }
 
 .power-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 800px;
+    display: grid; /* ใช้ grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
+    grid-gap: 20px; /* ระยะห่างระหว่างกล่อง */
+    max-width: 1200px; /* ความกว้างสูงสุด */
+    width: 100%; /* ความกว้างเต็ม */
+    margin: 0 auto; /* จัดให้อยู่กลาง */
 }
 
 .power-box {
@@ -91,31 +92,38 @@ h1 {
 }
 
 .critical {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
+    display: flex; /* ใช้ flexbox สำหรับการจัดแนว */
+    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+    width: 100%; /* ความกว้างเต็มช่อง */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+    padding: 10px; /* เพิ่ม Padding เพื่อให้ดูสวยงาม */
+    border: 1px solid #007bff; /* ขอบสี */
+    border-radius: 8px; /* มุมมน */
+    background-color: rgba(0, 123, 255, 0.1); /* พื้นหลังสีอ่อน */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เงาเล็กน้อย */
 }
 
-.criticals {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 15px;
+.critical .criticals {
+    font-size: 1.5em; /* ขนาดฟอนต์ */
+    font-weight: bold; /* ตัวหนา */
+    color: #007bff; /* สีข้อความ */
+    margin-right: 20px; /* ระยะห่างทางด้านขวา */
 }
 
-.critpower {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: rgb(255, 208, 0);
-    margin-bottom: 15px;
+.critical .critpower {
+    font-size: 1.5em; /* ขนาดฟอนต์ */
+    font-weight: bold; /* ตัวหนา */
+    color: rgb(255, 208, 0); /* สีข้อความ */
 }
+
 
 .button-container {
     display: flex;
-    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
-    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
-    flex-wrap: wrap; /* ให้ปุ่มที่เกินขอบสามารถขึ้นบรรทัดใหม่ได้ */
-    width: 100%;
+    justify-content: center; /* จัดปุ่มให้กลาง */
+    align-items: center; /* จัดปุ่มให้กลางแนวตั้ง */
+    flex-wrap: wrap; /* ให้ปุ่มขึ้นบรรทัดใหม่ได้ */
+    width: 100%; /* ความกว้างเต็ม */
     margin-top: 10px; /* ระยะห่างด้านบน */
 }
 
@@ -141,11 +149,11 @@ button:hover {
     color: yellow;
     border: none;
     border-radius: 15px;
-    height: 45;
-    width: 100px;
-    font-size: 25px;
-    font-weight: 10px;
+    height: 45px; /* ปรับความสูงของปุ่มให้เหมาะสม */
+    width: 100%; /* ปรับให้กว้างเต็มช่อง */
+    font-size: 1.2em; /* ปรับขนาดฟอนต์ */
     margin-top: 20px;
+    cursor: pointer; /* เปลี่ยนเป็น pointer เพื่อแสดงว่ากดได้ */
 }
 
 .ret:hover {
@@ -178,5 +186,30 @@ button:hover {
 
     .persona {
         font-size: 1.1em; /* ปรับขนาดฟอนต์ให้เล็กลง */
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        padding: 0 10px; /* เพิ่มระยะห่างด้านข้าง */
+    }
+
+    .power-container {
+        grid-template-columns: repeat(3, 1fr); /* ยังคงเป็น 3 คอลัมน์ */
+        overflow-x: hidden; /* ซ่อนการเลื่อนซ้ายขวา */
+    }
+
+    .power-box {
+        width: 300px; /* กำหนดความกว้างของแต่ละ power box */
+        margin: 10px; /* เพิ่มระยะห่างระหว่างกล่อง */
+    }
+
+    button {
+        padding: 12px 8px; /* ปรับขนาดปุ่ม */
+        font-size: 0.9em; /* ปรับขนาดฟอนต์ */
+    }
+
+    .persona {
+        width: 220px; /* ปรับความกว้างของปุ่ม Persona Ride */
     }
 }

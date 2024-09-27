@@ -13,6 +13,7 @@ h1 {
     margin-bottom: 20px;
     color: #333;
 }
+
 .persona {
     background-color: rgb(219, 219, 219);
     color: white;
@@ -34,16 +35,18 @@ h1 {
     font-size: 1.5em; /* ขนาดตัวอักษรใหญ่ขึ้น */
     font-weight: bold; /* ตัวอักษรหนาขึ้น */
 }
-.persona:hover{
+
+.persona:hover {
     background-color: #ffa600;
 }
 
 .power-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* จัดให้อยู่กลาง */
     max-width: 800px;
 }
+
 .lole {
     display: flex;
     align-items: center;
@@ -62,9 +65,11 @@ h1 {
     height: 100%; /* ปรับขนาดตามต้องการ */
     object-fit: contain; /* ให้รูปภาพแสดงเต็มที่โดยไม่บิดเบี้ยว */
 }
+
 .lole:hover {
     background-color: #ff5500; /* สีเมื่อ hover */
 }
+
 .power-box {
     display: flex;
     flex-direction: column;
@@ -74,7 +79,7 @@ h1 {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 30%; /* ปรับขนาดให้พอดีกับจอ */
     box-sizing: border-box;
 }
 
@@ -84,23 +89,27 @@ h1 {
     color: #007bff;
     margin-bottom: 15px;
 }
-.critical{
+
+.critical {
     display: flex;
     justify-content: space-between;
     width: 70%;
 }
-.criticals{
+
+.criticals {
     font-size: 1.8em;
     font-weight: bold;
     color: #007bff;
     margin-bottom: 15px;
 }
+
 .critpower {
     font-size: 1.8em;
     font-weight: bold;
     color: rgb(255, 208, 0);
     margin-bottom: 15px;
 }
+
 .button-container {
     display: flex;
     justify-content: center; /* จัดให้อยู่กลางแนวนอน */
@@ -109,20 +118,23 @@ h1 {
     width: 100%;
     margin-top: 10px; /* ระยะห่างด้านบน */
 }
+
 .ret {
     background-color: red;
     color: yellow;
     border: none;
     border-radius: 15px;
-    height: 45;
+    height: 45px; /* เพิ่ม px เพื่อให้เห็นชัดเจน */
     width: 100px;
     font-size: 25px;
     font-weight: 10px;
     margin-top: 20px;
 }
-.ret:hover{
+
+.ret:hover {
     background-color: rgb(143, 0, 0);
 }
+
 button {
     font-size: 1em;
     padding: 10px 15px;
@@ -139,14 +151,28 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* Media Queries สำหรับ Responsive */
 @media (max-width: 768px) {
     .power-box {
-        width: 45%;
+        width: 45%; /* ขยายให้เต็มหน้าจอในมือถือ */
+    }
+
+    .persona {
+        width: 90%; /* ปรับขนาดปุ่ม Persona ให้เต็มหน้าจอ */
+    }
+
+    h1 {
+        font-size: 1.5em; /* ปรับขนาดข้อความให้เหมาะสม */
     }
 }
 
 @media (max-width: 500px) {
     .power-box {
-        width: 100%;
+        width: 100%; /* ปรับให้เต็มหน้าจอ */
+    }
+
+    button {
+        width: 100%; /* ปรับขนาดปุ่มให้เต็มช่อง */
     }
 }

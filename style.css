@@ -3,18 +3,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* เปลี่ยนเป็น flex-start เพื่อให้เริ่มต้นที่ด้านบน */
+    justify-content: flex-start
     height: 100vh;
     margin: 0;
     background-color: #f4f4f9;
-    padding: 20px; /* เพิ่ม Padding เพื่อไม่ให้เนื้อหาชิดขอบ */
-    box-sizing: border-box; /* ทำให้ Padding คำนวณใน Width */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
     margin-bottom: 20px;
     color: #333;
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    text-align: center;
 }
 
 .persona {
@@ -23,20 +23,20 @@ h1 {
     border: none;
     border-radius: 10px;
     height: 45px;
-    width: 100%; /* ปรับให้กว้าง 100% */
-    max-width: 300px; /* ตั้งค่าสูงสุดให้ปุ่มไม่ใหญ่เกินไป */
+    width: 100%;
+    max-width: 300px;
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 20px; /* เพิ่ม margin เพื่อให้มีระยะห่างจากส่วนอื่น */
-    text-align: center; /* จัดข้อความในปุ่มให้อยู่กลาง */
+    margin: 20px;
+    text-align: center;
 }
 
 .persona.clicked {
     color: yellow;
-    background-color: red; /* สีหลังจากกดปุ่ม */
-    font-size: 1.5em; /* ขนาดตัวอักษรใหญ่ขึ้น */
-    font-weight: bold; /* ตัวอักษรหนาขึ้น */
+    background-color: red;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .persona:hover {
@@ -57,18 +57,18 @@ h1 {
 }
 
 .lole img {
-    width: 100%; /* ปรับขนาดตามต้องการ */
-    height: 100%; /* ปรับขนาดตามต้องการ */
-    object-fit: contain; /* ให้รูปภาพแสดงเต็มที่โดยไม่บิดเบี้ยว */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .power-container {
-    display: grid; /* ใช้ grid layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
-    grid-gap: 20px; /* ระยะห่างระหว่างกล่อง */
-    max-width: 1200px; /* ความกว้างสูงสุด */
-    width: 100%; /* ความกว้างเต็ม */
-    margin: 0 auto; /* จัดให้อยู่กลาง */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .power-box {
@@ -85,46 +85,46 @@ h1 {
 }
 
 .power {
-    font-size: 1.5em; /* ปรับขนาดให้เล็กลง */
+    font-size: 1.5em;
     font-weight: bold;
     color: #007bff;
     margin-bottom: 15px;
 }
 
 .critical {
-    display: flex; /* ใช้ flexbox สำหรับการจัดแนว */
-    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
-    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
-    width: 100%; /* ความกว้างเต็มช่อง */
-    margin-top: 10px; /* ระยะห่างด้านบน */
-    padding: 10px; /* เพิ่ม Padding เพื่อให้ดูสวยงาม */
-    border: 1px solid #007bff; /* ขอบสี */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #007bff;
     border-radius: 8px; /* มุมมน */
-    background-color: rgba(0, 123, 255, 0.1); /* พื้นหลังสีอ่อน */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เงาเล็กน้อย */
+    background-color: rgba(0, 123, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .critical .criticals {
-    font-size: 1.5em; /* ขนาดฟอนต์ */
-    font-weight: bold; /* ตัวหนา */
-    color: #007bff; /* สีข้อความ */
-    margin-right: 20px; /* ระยะห่างทางด้านขวา */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 20px;
 }
 
 .critical .critpower {
-    font-size: 1.5em; /* ขนาดฟอนต์ */
-    font-weight: bold; /* ตัวหนา */
-    color: rgb(255, 208, 0); /* สีข้อความ */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(255, 208, 0);
 }
 
 
 .button-container {
     display: flex;
-    justify-content: center; /* จัดปุ่มให้กลาง */
-    align-items: center; /* จัดปุ่มให้กลางแนวตั้ง */
-    flex-wrap: wrap; /* ให้ปุ่มขึ้นบรรทัดใหม่ได้ */
-    width: 100%; /* ความกว้างเต็ม */
-    margin-top: 10px; /* ระยะห่างด้านบน */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
 }
 
 button {
@@ -149,11 +149,11 @@ button:hover {
     color: yellow;
     border: none;
     border-radius: 15px;
-    height: 45px; /* ปรับความสูงของปุ่มให้เหมาะสม */
-    width: 100%; /* ปรับให้กว้างเต็มช่อง */
-    font-size: 1.2em; /* ปรับขนาดฟอนต์ */
+    height: 45px;
+    width: 100%;
+    font-size: 1.2em;
     margin-top: 20px;
-    cursor: pointer; /* เปลี่ยนเป็น pointer เพื่อแสดงว่ากดได้ */
+    cursor: pointer;
 }
 
 .ret:hover {
@@ -163,53 +163,53 @@ button:hover {
 /* Media Queries สำหรับ Responsive */
 @media (max-width: 768px) {
     .power-box {
-        width: 90%; /* ขยายให้เต็มหน้าจอในมือถือ */
+        width: 90%;
     }
 
     .persona {
-        width: 90%; /* ปรับขนาดปุ่ม Persona ให้เต็มหน้าจอ */
+        width: 90%;
     }
 
     h1 {
-        font-size: 1.5em; /* ปรับขนาดข้อความให้เหมาะสม */
+        font-size: 1.5em;
     }
 }
 
 @media (max-width: 500px) {
     .power-box {
-        width: 100%; /* ปรับให้เต็มหน้าจอ */
+        width: 100%;
     }
 
     button {
-        width: 100%; /* ปรับขนาดปุ่มให้เต็มช่อง */
+        width: 100%;
     }
 
     .persona {
-        font-size: 1.1em; /* ปรับขนาดฟอนต์ให้เล็กลง */
+        font-size: 1.1em;
     }
 }
 
 @media (orientation: landscape) {
     body {
-        padding: 0 10px; /* เพิ่มระยะห่างด้านข้าง */
+        padding: 0 10px;
     }
 
     .power-container {
-        grid-template-columns: repeat(3, 1fr); /* ยังคงเป็น 3 คอลัมน์ */
-        overflow-x: hidden; /* ซ่อนการเลื่อนซ้ายขวา */
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: hidden;
     }
 
     .power-box {
-        width: 300px; /* กำหนดความกว้างของแต่ละ power box */
-        margin: 10px; /* เพิ่มระยะห่างระหว่างกล่อง */
+        width: 300px;
+        margin: 10px;
     }
 
     button {
-        padding: 12px 8px; /* ปรับขนาดปุ่ม */
-        font-size: 0.9em; /* ปรับขนาดฟอนต์ */
+        padding: 12px 8px; 
+        font-size: 0.9em; 
     }
 
     .persona {
-        width: 220px; /* ปรับความกว้างของปุ่ม Persona Ride */
+        width: 220px;
     }
 }
